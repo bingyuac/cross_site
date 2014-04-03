@@ -207,4 +207,12 @@ $(document).ready(function(){
 	    }
 	}
     }, 50);
+
+    //<a id="test13">POST with proxy</a>
+    $("#test13").click(function() {
+	var data={'test':4, "result":5};
+        $.post("http://ning.yixun.com:8080/proxy_params", data, function(ret) {
+	    console.log(ret);
+	})
+    })
 })
